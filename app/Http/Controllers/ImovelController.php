@@ -48,6 +48,7 @@ class ImovelController extends Controller
     public function show(Imovel $imovel)
     {
         return view('imoveis.show', compact('imovel'));
+        
     }
 
     /**

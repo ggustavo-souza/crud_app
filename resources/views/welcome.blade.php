@@ -58,7 +58,7 @@
                         <a class="nav-link" href="/products">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/imoveis">Imóveis</a>
+                        <a class="nav-link" href="/imovels">Imóveis</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -81,7 +81,7 @@
                 </div>
             </a>
 
-            <a href="/imoveis" class="cardA col-md-5 m-3">
+            <a href="/imovels" class="cardA col-md-5 m-3">
                 <div class="card shadow shadow-5 align-items-center p-5" style="background-color: #FFD230">
                     <i class="fa-3x fa-solid fa-house mb-2"></i>
                     <h3>Imóveis</h3>

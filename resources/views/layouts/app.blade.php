@@ -38,7 +38,7 @@
                         <a class="nav-link" href="/products">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/imoveis">Imóveis</a>
+                        <a class="nav-link" href="/imovels">Imóveis</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">

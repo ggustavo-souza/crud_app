@@ -49,7 +49,7 @@
                                                 class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> Editar</a>
 
                                             <button type="submit" class="btn btn-danger btn-sm"
-                                                onclick="return confirm('Do you want to delete this product?');"><i
+                                                onclick="return confirm('Quer mesmo excluir este produto?');"><i
                                                     class="fa fa-trash"></i> Excluir</button>
                                         </form>
                                     </td>

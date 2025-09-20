@@ -33,13 +33,21 @@ class ImovelController extends Controller
             'endereco' => 'required|string|max:255',
             'descricao' => 'required|string',
             'proprietario' => 'required|string',
-            'foto' => 'string',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        Imovel::create($request->all());
+        $dados = $request->all();
+
+        if ($request->hasFile('foto')) {
+            $caminhoFoto = $request->file('foto')->store('imovels', 'public');
+
+            $dados['foto'] = $caminhoFoto;
+        }
+
+        Imovel::create($dados);
 
         return redirect()->route('imovels.index')
-            ->with('success', '');
+            ->with('success', 'Imóvel criado com sucesso');
     }
 
     /**
@@ -47,8 +55,7 @@ class ImovelController extends Controller
      */
     public function show(Imovel $imovel)
     {
-        return view('imoveis.show', compact('imovel'));
-        
+        return view('imovels.show', compact('imovel'));
     }
 
     /**
@@ -73,8 +80,8 @@ class ImovelController extends Controller
 
         $imovel->update($request->all());
 
-        return redirect()->route('imoveis.index')
-                        ->with('success','Imóvel atualizado com sucesso!');
+        return redirect()->route('imovels.index')
+            ->with('success', 'Imóvel atualizado com sucesso!');
     }
 
     /**
@@ -84,8 +91,8 @@ class ImovelController extends Controller
     {
         $imovel->delete();
 
-        return redirect()->route('imoveis.index')
-                            ->with('success','Imóvel deletado com sucesso!');
+        return redirect()->route('imovels.index')
+            ->with('success', 'Imóvel deletado com sucesso!');
 
     }
 }

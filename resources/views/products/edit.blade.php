@@ -17,7 +17,7 @@
                     Edit Product
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-warning btn-sm">&larr; Back</a>
                 </div>
             </div>
             <div class="card-body">
@@ -76,7 +76,7 @@
                     </div>
                     
                     <div class="mb-3 row">
-                        <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Update">
+                        <input type="submit" class="col-md-3 offset-md-5 btn btn-warning" value="Update">
                     </div>
                     
                 </form>

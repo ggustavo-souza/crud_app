@@ -16,8 +16,10 @@
             <div class="card mt-5">
                 <div class="card-header">Lista de Produtos</div>
                 <div class="card-body">
+                    @can('create products')
                     <a href="{{ route('products.create') }}" class="btn btn-warning btn-sm my-2"><i
                             class="fa fa-plus"></i> Adicionar Produto</a>
+                    @endcan
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -44,13 +46,15 @@
 
                                             <a href="{{ route('products.show', $product->id) }}"
                                                 class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Ver</a>
-
+                                            @can('edit products')
                                             <a href="{{ route('products.edit', $product->id) }}"
                                                 class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> Editar</a>
-
+                                            @endcan
+                                            @can('delete products')
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Quer mesmo excluir este produto?');"><i
                                                     class="fa fa-trash"></i> Excluir</button>
+                                            @endcan
                                         </form>
                                     </td>
                                 </tr>

@@ -16,8 +16,10 @@
             <div class="card mt-5">
                 <div class="card-header">Lista de Imóveis</div>
                 <div class="card-body">
+                    @can('create imovels')
                     <a href="{{ route('imovels.create') }}" class="btn btn-warning btn-sm my-2"><i class="fa fa-plus"></i>
                         Adicionar Imóvel</a>
+                    @endcan
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -54,13 +56,15 @@
 
                                             <a href="{{ route('imovels.show', $imovel->id) }}" class="btn btn-warning btn-sm"><i
                                                     class="fa fa-eye"></i> Ver</a>
-
+                                            @can('edit imovels')
                                             <a href="{{ route('imovels.edit', $imovel->id) }}" class="btn btn-warning btn-sm"><i
                                                     class="fa fa-pencil"></i> Editar</a>
-
+                                            @endcan
+                                            @can('delete imovels')
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Quer deletar este imovel?');"><i
                                                     class="fa fa-trash"></i> Excluir</button>
+                                            @endcan
                                         </form>
                                     </td>
                                 </tr>

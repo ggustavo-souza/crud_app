@@ -40,7 +40,7 @@
                                         <td class="mb-4 text-center">
                                             {{-- 2. Gera a URL usando asset() e o caminho guardado --}}
                                             <img src="{{ asset('storage/' . $imovel->foto) }}" alt="Foto do Imóvel"
-                                                class="img-fluid rounded" style="max-height: 200px;">
+                                                class="img-fluid rounded" style="max-height: 100px;">
                                         </td>
                                     @else
                                         <td class="alert alert-info text-center">

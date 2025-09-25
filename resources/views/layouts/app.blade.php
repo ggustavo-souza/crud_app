@@ -41,13 +41,6 @@
                         <a class="nav-link" href="/imovels">Imóveis</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light" href="#" role="button">
-                            <i class="fas fa-sign-in-alt me-2"></i>Login
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>

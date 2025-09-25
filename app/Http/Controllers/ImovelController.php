@@ -75,13 +75,21 @@ class ImovelController extends Controller
             'endereco' => 'required|string|max:255',
             'descricao' => 'required|string',
             'proprietario' => 'required|string',
-            'foto' => 'string',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $imovel->update($request->all());
+        $dados = $request->all();
+
+        if ($request->hasFile('foto')) {
+            $caminhoFoto = $request->file('foto')->store('imovels', 'public');
+
+            $dados['foto'] = $caminhoFoto;
+        }
+
+        $imovel->update($dados);
 
         return redirect()->route('imovels.index')
-            ->with('success', 'Imóvel atualizado com sucesso!');
+            ->with('success', 'Imóvel atualizado com sucesso');
     }
 
     /**

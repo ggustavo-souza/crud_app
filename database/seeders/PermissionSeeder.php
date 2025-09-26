@@ -30,6 +30,11 @@ class PermissionSeeder extends Seeder
         Permission::firstOrCreate(['name' => 'edit imovels']);
         Permission::firstOrCreate(['name' => 'delete imovels']);
 
+        Permission::firstOrCreate(['name' => 'view users']);
+        Permission::firstOrCreate(['name' => 'create users']);
+        Permission::firstOrCreate(['name' => 'edit users']);
+        Permission::firstOrCreate(['name' => 'delete users']);
+
         // 2. Criar papéis e atribuir permissões
 
         // Papel de Usuário Normal

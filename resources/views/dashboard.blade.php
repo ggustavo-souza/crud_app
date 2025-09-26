@@ -21,6 +21,14 @@
                                 <h3>Imóveis</h3>
                             </div>
                         </a>
+                        @can('view users')
+                            <a href="/users" class="cardA col-md-5 m-3">
+                                <div class="card shadow shadow-5 align-items-center p-5" style="background-color: #FFD230">
+                                    <i class="fa-3x fa-solid fa-user mb-2"></i>
+                                    <h3>Usuários</h3>
+                                </div>
+                            </a>
+                        @endcan
 
                     </div>
                 </div>

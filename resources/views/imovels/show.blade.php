@@ -11,7 +11,7 @@
                         Informação do Imóvel
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('imovels.index') }}" class="btn btn-warning btn-sm">&larr; Back</a>
+                        <a href="{{ route('imovels.index') }}" class="btn btn-warning btn-sm">&larr; Voltar</a>
                     </div>
                 </div>
                 <div class="card-body">

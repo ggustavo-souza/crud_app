@@ -12,7 +12,7 @@ class ImovelController extends Controller
      */
     public function index()
     {
-        $imovels = Imovel::latest()->paginate(10);
+        $imovels = Imovel::latest()->paginate(3);
         return view("imovels.index", compact("imovels"));
     }
 

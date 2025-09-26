@@ -19,7 +19,7 @@
                     Editar Usuário
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('users.index') }}" class="btn btn-warning btn-sm">&larr; Back</a>
+                    <a href="{{ route('users.index') }}" class="btn btn-warning btn-sm">&larr; Voltar</a>
                 </div>
             </div>
             <div class="card-body">

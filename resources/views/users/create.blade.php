@@ -13,7 +13,7 @@
                     Adicionar Usuário
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('users.index') }}" class="btn btn-warning btn-sm">&larr; Back</a>
+                    <a href="{{ route('users.index') }}" class="btn btn-warning btn-sm">&larr; Voltar</a>
                 </div>
             </div>
             <div class="card-body">
@@ -43,7 +43,17 @@
                     <div class="mb-3 row">
                         <label for="email" class="col-md-4 col-form-label text-md-end text-start">Email</label>
                         <div class="col-md-6">
-                          <input type="number" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                          <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                            @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="password" class="col-md-4 col-form-label text-md-end text-start">Senha</label>
+                        <div class="col-md-6">
+                          <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" value="{{ old('email') }}">
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror

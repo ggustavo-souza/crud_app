@@ -14,10 +14,10 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Edit Product
+                    Editar Produto
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('products.index') }}" class="btn btn-warning btn-sm">&larr; Back</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-warning btn-sm">&larr; Voltar</a>
                 </div>
             </div>
             <div class="card-body">

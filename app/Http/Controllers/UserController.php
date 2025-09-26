@@ -36,7 +36,7 @@ class UserController extends Controller
         User::create($request->validated());
 
         return redirect()->route('users.index')
-                ->withSuccess('New user is added successfully.');
+                ->withSuccess('Novo usuário foi cadastrado.');
     }
 
     /**
@@ -63,7 +63,7 @@ class UserController extends Controller
         $user->update($request->validated());
 
         return redirect()->back()
-                ->withSuccess('User is updated successfully.');
+                ->withSuccess('Usuário foi atualizado com sucesso!.');
     }
 
     /**
@@ -74,6 +74,6 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('users.index')
-                ->withSuccess('User is deleted successfully.');
+                ->withSuccess('Usuário foi deletado com sucesso.');
     }
 }

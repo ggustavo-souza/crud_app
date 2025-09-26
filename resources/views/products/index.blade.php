@@ -17,7 +17,7 @@
                 <div class="card-header">Lista de Produtos</div>
                 <div class="card-body">
                     @can('create products')
-                    <a href="{{ route('products.create') }}" class="btn btn-warning btn-sm my-2"><i
+                    <a href="{{ route('products.create') }}" class="btn btn-warning btn-sm my-3"><i
                             class="fa fa-plus"></i> Adicionar Produto</a>
                     @endcan
                     <table class="table table-striped table-bordered">
